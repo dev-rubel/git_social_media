@@ -89,5 +89,5 @@ Based on the above definition, both a person and a page is followable
 1. Update DB info in ```.env```
 2. ```composer install```
 3. ```php artisan migrate```
-4. Imort postman collection (root directory)
+4. [Imort postman collection (root directory)](https://github.com/dev-rubel/git_social_media/blob/development/SocialMedia.postman_collection.json "Imort postman collection (root directory)")
 5. Then run it.
