@@ -1,6 +1,13 @@
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
+## Instructions
+1. Update DB info in ```.env```
+2. ```composer install```
+3. ```php artisan migrate```
+4. [Imort postman collection (root directory)](https://github.com/dev-rubel/git_social_media/blob/development/SocialMedia.postman_collection.json "Imort postman collection (root directory)")
+1. Documentation (https://documenter.getpostman.com/view/2649623/UzBjuUfG)
+1. Then run it.
 
 ## Introduction
 Ever thought about the tremendous popularity of social networks among modern Internet users?
@@ -85,10 +92,3 @@ Based on the above definition, both a person and a page is followable
 	- HTTP Method: GET
 - **Response**: Feed Object
 
-## Instructions
-1. Update DB info in ```.env```
-2. ```composer install```
-3. ```php artisan migrate```
-4. [Imort postman collection (root directory)](https://github.com/dev-rubel/git_social_media/blob/development/SocialMedia.postman_collection.json "Imort postman collection (root directory)")
-1. Documentation (https://documenter.getpostman.com/view/2649623/UzBjuUfG)
-1. Then run it.
