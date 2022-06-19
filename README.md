@@ -62,7 +62,7 @@ Based on the above definition, both a person and a page is followable
 	- HTTP Method: PUT/POST
 - **Response**: Any message
 
-> ** api/person/attach-post**
+> **api/person/attach-post**
 
 - **Purpose**: Logged in person publishes a post.
 - **Requirement**:
@@ -78,7 +78,7 @@ Based on the above definition, both a person and a page is followable
 	- **Request**: [ post_content(string) ]
 - Response: Any message
 
-> ** api/person/feed**
+> **api/person/feed**
 
 - **Purpose**: Get the feed for the currently logged in person
 - **Requirement**:
