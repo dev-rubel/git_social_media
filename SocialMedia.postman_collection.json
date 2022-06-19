@@ -1,0 +1,1171 @@
+{
+	"info": {
+		"_postman_id": "19b8fe8b-3249-4e59-b043-1e4745439f77",
+		"name": "SocialMedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2649623"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "api/auth/login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "dpirubel+89@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/auth/login",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "dpirubel+88@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/social_media/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 16:12:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"first_name\": \"Dev\",\n        \"last_name\": \"Test\",\n        \"email\": \"dpirubel+88@gmail.com\"\n    },\n    \"access_token\": \"1|VmfgWzr1b3vkOviEn9CtPAERPVpLG6TFV7p6Quvu\"\n}"
+						}
+					]
+				},
+				{
+					"name": "api/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "dev",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dpirubel+90@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/auth/register",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "first_name",
+											"value": "dev",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "dpirubel+89@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/social_media/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 16:12:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"first_name\": \"Dev\",\n        \"last_name\": \"Test\",\n        \"email\": \"dpirubel+89@gmail.com\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "> **api/auth/register**\n\n*   Purpose: Register the person to the system\n*   Requirement:\n    *   HTTP Method: POST\n    *   Request: \\[ First Name, Last Name, Email, Password \\]\n    *   Response: Person Object\n\n> **api/auth/login**\n\n*   Purpose: Login the person\n*   Requirement:\n    *   HTTP Method: POST\n    *   Request: \\[Email, Password \\]\n*   Response:\n    *   Bearer authorization token\n    *   User object"
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "api/person/feed",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base}}/api/person/feed",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"person",
+								"feed"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/person/feed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost/social_media/api/person/feed",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"person",
+										"feed"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 18:02:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"post_content\": \"test\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "api/person/attach-post",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_content",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/person/attach-post",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"person",
+								"attach-post"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/person/attach-post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "post_content",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/social_media/api/person/attach-post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"person",
+										"attach-post"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 18:01:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 2,\n        \"post_content\": \"test\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "> **api/person/attach-post**\n\n*   Purpose: Logged in person publishes a post.\n*   Requirement:\n    *   HTTP Method: POST\n    *   Request: \\[ post_content(string) \\]\n*   Response: Any message\n    \n\n> **api/person/feed**\n\n*   Purpose: Get the feed for the currently logged in person\n*   Requirement:\n    *   HTTP Method: GET\n*   Response: Feed Object"
+		},
+		{
+			"name": "Page",
+			"item": [
+				{
+					"name": "api/page/create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "page_name",
+									"value": "test 3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/page/create",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"page",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/page/create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "page_name",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/social_media/api/page/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"page",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 17:54:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"test\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "api/page/{pageId}/attach-post",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_content",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/page/{{pageId}}/attach-post",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"page",
+								"{{pageId}}",
+								"attach-post"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/page/{page}/attach-post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "post_content",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/social_media/api/page/1/attach-post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"page",
+										"1",
+										"attach-post"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 17:57:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"post_content\": \"test\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "> **api/page/create**\n\n*   Purpose: Logged in person create a page\n*   Requirement:\n    *   HTTP Method: POST\n    *   Request: \\[page_name(string) \\]\n*   Response: Any message\n    \n\n> **api/page/{pageId}/attach-post**\n\n*   Purpose: Logged in person publishes a post to a page owned by him/her\n*   Requirement:\n    *   HTTP Method: POST\n    *   Request: \\[ post_content(string) \\]\n*   Response: Any message"
+		},
+		{
+			"name": "Follow",
+			"item": [
+				{
+					"name": "follow/person/{personId}",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base}}/api/follow/person/{{personId}}",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"follow",
+								"person",
+								"{{personId}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/page/{page}/attach-post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "post_content",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/social_media/api/page/1/attach-post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"page",
+										"1",
+										"attach-post"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 17:57:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"post_content\": \"test\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "follow/page/{pageId}",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base}}/api/follow/page/{{pageId}}",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"follow",
+								"page",
+								"{{pageId}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "api/page/{page}/attach-post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "post_content",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/social_media/api/page/1/attach-post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"social_media",
+										"api",
+										"page",
+										"1",
+										"attach-post"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jun 2022 17:57:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.51 (Win64) PHP/7.4.26"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"post_content\": \"test\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "> **api/follow/person/{personId}**\n\n*   Purpose: Logged in person will follow another person of given id\n*   Requirement:\n    *   HTTP Method: PUT/POST\n*   Response: Any message\n    \n\n> **api/follow/page/{pageId}**\n\n*   Purpose: Logged in person will follow another person of given id\n*   Requirement:\n    *   HTTP Method: PUT/POST\n*   Response: Any message"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://localhost/social_media",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "1|UDBdyikXFq3QYOTfEEP3hwM9v0QBQ8aW4uH3LMnY",
+			"type": "string"
+		},
+		{
+			"key": "pageId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "personId",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
