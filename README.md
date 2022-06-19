@@ -1,61 +1,93 @@
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+## Introduction
+Ever thought about the tremendous popularity of social networks among modern Internet users?
+Starting to create a social network right now, you get the opportunity to join the top wealthiest people list in several years!
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Lets see what steps you should take to get closer to your goals.
+In your social network, there are two types of entities.
+1. Person
+2. Page
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+A person can create a page, can follow another person, or a page. A page can neither follow a person nor another page.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+In other words, both a person or a page can have zero or more followers.
 
-## Learning Laravel
+Both a person and a page can post a status update. When they do, their followers will see the post on their newsfeed. As mentioned above, a person can be a follower thus has a newsfeed, but a page cannot be a follower and thus does not have a newsfeed.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+There can be any number of persons and pages in this social network.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Based on the above definition, both a person and a page is followable
 
-## Laravel Sponsors
+## Task is implement the following api`s
+> **api/auth/register**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Purpose**: Register the person to the system
+- **Requirement**:
+	- HTTP Method: POST
+	- Request: [ First Name, Last Name, Email, Password ]
+- **Response**: Person Object
 
-### Premium Partners
+> **api/auth/login**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+- **Purpose**: Login the person
+- **Requirement**:
+	- HTTP Method: POST
+	- Request: [Email, Password ]
+- **Response**:
+	- Bearer authorization token
+	- User object.
 
-## Contributing
+> **api/page/create**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Purpose**: Logged in person create a page
+- **Requirement**:
+	- HTTP Method: POST
+	- Request: [page_name(string) ]
+- **Response**: Any message
 
-## Code of Conduct
+> **api/follow/person/{personId}**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Purpose**: Logged in person will follow another person of given id
+- **Requirement**:
+	- HTTP Method: PUT/POST
+- **Response**: Any message
 
-## Security Vulnerabilities
+> **api/follow/page/{pageId}**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Purpose**: Logged in person will follow another person of given id
+- **Requirement**:
+	- HTTP Method: PUT/POST
+- **Response**: Any message
 
-## License
+>** api/person/attach-post**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Purpose**: Logged in person publishes a post.
+- **Requirement**:
+	- HTTP Method: POST
+	- Request: [ post_content(string) ]
+- **Response**: Any message
+
+> **api/page/{pageId}/attach-post**
+
+- **Purpose**: Logged in person publishes a post to a page owned by him/her
+- **Requirement**:
+	- HTTP Method: POST
+	- **Request**: [ post_content(string) ]
+- Response: Any message
+
+>** api/person/feed**
+
+- **Purpose**: Get the feed for the currently logged in person
+- **Requirement**:
+	- HTTP Method: GET
+- **Response**: Feed Object
+
+## Instructions
+1. Update DB info in ```.env```
+2. ```composer install```
+3. ```php artisan migrate```
+4. Imort postman collection (root directory)
+5. Then run it.
